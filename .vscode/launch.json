@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "console": "internalConsole",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "java",
+            "name": "Launch DreamerAiChatApplication",
+            "request": "launch",
+            "mainClass": "com.dreamer.chat.DreamerAiChatApplication",
+            "projectName": "dreamer-ai-chat",
+            "console": "internalConsole",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "java",
+            "name": "Debug Spring Boot (Dev)",
+            "request": "launch",
+            "mainClass": "com.dreamer.chat.DreamerAiChatApplication",
+            "projectName": "dreamer-ai-chat",
+            "env": {
+                "SPRING_PROFILES_ACTIVE": "dev,debug"
+            },
+            "vmArgs": "-Dspring.profiles.active=dev,debug",
+            "console": "internalConsole",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "java",
+            "name": "Attach to Remote JVM (Port 5005)",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 5005
+        }
+    ]
+} 

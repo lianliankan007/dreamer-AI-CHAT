@@ -1,0 +1,493 @@
+[WARNING] Settings for server carkey-pub uses legacy format
+[WARNING] Settings for server carkey-pub uses legacy format
+[INFO] Scanning for projects...
+[WARNING] The requested profile "s3s3l-profile" could not be activated because it does not exist.
+[INFO] 
+[INFO] --------------------< com.dreamer:dreamer-ai-chat >---------------------
+[INFO] Building dreamer-ai-chat 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.2:run (default-cli) > test-compile @ dreamer-ai-chat >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dreamer-ai-chat ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 9 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ dreamer-ai-chat ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dreamer-ai-chat ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ dreamer-ai-chat ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.2:run (default-cli) < test-compile @ dreamer-ai-chat <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.2:run (default-cli) @ dreamer-ai-chat ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2025-07-31 16:59:11 [main] INFO  c.d.chat.DreamerAiChatApplication - Starting DreamerAiChatApplication using Java 17.0.12 with PID 36098 (/Users/hb29301/dreamer-ai-chat/target/classes started by hb29301 in /Users/hb29301/dreamer-ai-chat)
+2025-07-31 16:59:11 [main] DEBUG c.d.chat.DreamerAiChatApplication - Running with Spring Boot v3.2.2, Spring v6.1.3
+2025-07-31 16:59:11 [main] INFO  c.d.chat.DreamerAiChatApplication - The following 1 profile is active: "dev"
+2025-07-31 16:59:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-31 16:59:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2025-07-31 16:59:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-31 16:59:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 16:59:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-07-31 16:59:12 [main] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-07-31 16:59:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 682 ms
+2025-07-31 16:59:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-31 16:59:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@1fa9692b
+2025-07-31 16:59:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-31 16:59:13 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.22.3 by Redgate
+2025-07-31 16:59:13 [main] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-07-31 16:59:13 [main] INFO  o.f.c.i.license.VersionPrinter - 
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/callback' ...
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@22d8cfe0 ...
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Unable to resolve location classpath:db/callback.
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration-sqlite' ...
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Determining location urls for classpath:db/migration-sqlite using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@22d8cfe0 ...
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Scanning URL: file:/Users/hb29301/dreamer-ai-chat/target/classes/db/migration-sqlite
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: /Users/hb29301/dreamer-ai-chat/target/classes/
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: /Users/hb29301/dreamer-ai-chat/target/classes/db/migration-sqlite (db/migration-sqlite)
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Found resource: db/migration-sqlite/V001__create_conversations_table.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Found resource: db/migration-sqlite/V002__create_messages_table.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Found resource: db/migration-sqlite/V003__create_prompt_templates_table.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Found resource: db/migration-sqlite/V004__insert_default_prompt_templates.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Found resource: db/migration-sqlite/V005__fix_prompt_templates_table.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.classpath.ClassPathScanner - Scanning for classes at classpath:db/migration-sqlite
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.r.ResourceNameValidator - Validating V002__create_messages_table.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.r.ResourceNameValidator - Validating V001__create_conversations_table.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.r.ResourceNameValidator - Validating V005__fix_prompt_templates_table.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.r.ResourceNameValidator - Validating V003__create_prompt_templates_table.sql
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.r.ResourceNameValidator - Validating V004__insert_default_prompt_templates.sql
+2025-07-31 16:59:13 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:/Users/hb29301/.dreamer-ai-chat/dev-database.db (SQLite 3.43)
+2025-07-31 16:59:13 [main] DEBUG org.flywaydb.core.FlywayExecutor - Driver: SQLite JDBC 3.43.2.0
+2025-07-31 16:59:13 [main] DEBUG org.flywaydb.core.FlywayExecutor - DDL Transactions Supported: true
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.SchemaHistoryFactory - Schemas: 
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.s.SchemaHistoryFactory - Default schema: null
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.c.SqlScriptCallbackFactory - Scanning for SQL callbacks ...
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.command.DbValidate - Validating migrations ...
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V002__create_messages_table.sql (filename: V002__create_messages_table.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V001__create_conversations_table.sql (filename: V001__create_conversations_table.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V005__fix_prompt_templates_table.sql (filename: V005__fix_prompt_templates_table.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V003__create_prompt_templates_table.sql (filename: V003__create_prompt_templates_table.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V004__insert_default_prompt_templates.sql (filename: V004__insert_default_prompt_templates.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V002__create_messages_table.sql (filename: V002__create_messages_table.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V001__create_conversations_table.sql (filename: V001__create_conversations_table.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V005__fix_prompt_templates_table.sql (filename: V005__fix_prompt_templates_table.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V003__create_prompt_templates_table.sql (filename: V003__create_prompt_templates_table.sql)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.scanner.Scanner - Filtering out resource: db/migration-sqlite/V004__insert_default_prompt_templates.sql (filename: V004__insert_default_prompt_templates.sql)
+2025-07-31 16:59:13 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 5 migrations (execution time 00:00.008s)
+2025-07-31 16:59:13 [main] DEBUG o.f.core.internal.command.DbSchemas - Skipping creation of existing schema: "main"
+2025-07-31 16:59:13 [main] DEBUG o.f.c.i.database.sqlite.SQLiteTable - Unable to lock "main"."flyway_schema_history" as SQLite does not support locking. No concurrent migration supported.
+2025-07-31 16:59:13 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 005
+2025-07-31 16:59:13 [main] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2025-07-31 16:59:13 [main] DEBUG org.flywaydb.core.FlywayExecutor - Memory usage: 32 of 90M
+2025-07-31 16:59:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-31 16:59:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-07-31 16:59:13 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-07-31 16:59:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-31 16:59:13 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-31 16:59:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31 16:59:13 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-31 16:59:14 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31 16:59:14 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-07-31 16:59:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-07-31 16:59:14 [main] INFO  c.d.chat.DreamerAiChatApplication - Started DreamerAiChatApplication in 2.608 seconds (process running for 2.854)
+2025-07-31 16:59:41 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 16:59:41 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-31 16:59:41 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-31 16:59:41 [http-nio-8080-exec-1] INFO  c.d.chat.controller.ChatController - 测试流式聊天: message=hello, modelProvider=qianwen
+2025-07-31 16:59:41 [stream-chat-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        conversations
+        (created_time, model_name, model_provider, status, title, updated_time, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        conversations
+        (created_time, model_name, model_provider, status, title, updated_time, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-07-31 16:59:41 [stream-chat-1] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+2025-07-31 16:59:41 [stream-chat-1] INFO  c.d.chat.service.ConversationService - 创建新对话成功: id=9, title=测试流式对话, modelProvider=qianwen, userId=test-user
+2025-07-31 16:59:41 [stream-chat-1] DEBUG org.hibernate.SQL - 
+    select
+        coalesce(max(m1_0.sequence_number), 0) 
+    from
+        messages m1_0 
+    where
+        m1_0.conversation_id=?
+Hibernate: 
+    select
+        coalesce(max(m1_0.sequence_number), 0) 
+    from
+        messages m1_0 
+    where
+        m1_0.conversation_id=?
+2025-07-31 16:59:41 [stream-chat-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (content, conversation_id, message_type, metadata, sequence_number, timestamp, token_count) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        messages
+        (content, conversation_id, message_type, metadata, sequence_number, timestamp, token_count) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-07-31 16:59:41 [stream-chat-1] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+2025-07-31 16:59:41 [stream-chat-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.content,
+        m1_0.conversation_id,
+        m1_0.message_type,
+        m1_0.metadata,
+        m1_0.sequence_number,
+        m1_0.timestamp,
+        m1_0.token_count 
+    from
+        messages m1_0 
+    left join
+        conversations c1_0 
+            on c1_0.id=m1_0.conversation_id 
+    where
+        c1_0.id=? 
+    order by
+        m1_0.sequence_number
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.content,
+        m1_0.conversation_id,
+        m1_0.message_type,
+        m1_0.metadata,
+        m1_0.sequence_number,
+        m1_0.timestamp,
+        m1_0.token_count 
+    from
+        messages m1_0 
+    left join
+        conversations c1_0 
+            on c1_0.id=m1_0.conversation_id 
+    where
+        c1_0.id=? 
+    order by
+        m1_0.sequence_number
+2025-07-31 16:59:41 [stream-chat-1] DEBUG c.d.c.service.PromptBuilderService - 构建Prompt: provider=QIANWEN, type=CHAT, contextSize=1
+2025-07-31 16:59:41 [stream-chat-1] DEBUG c.d.c.service.PromptTemplateService - 查找最佳模板: modelProvider=QIANWEN, promptType=CHAT
+2025-07-31 16:59:41 [stream-chat-1] DEBUG org.hibernate.SQL - 
+    select
+        pt1_0.id,
+        pt1_0.assistant_prefix,
+        pt1_0.conversation_starter,
+        pt1_0.created_by,
+        pt1_0.created_time,
+        pt1_0.description,
+        pt1_0.enabled,
+        pt1_0.extra_config,
+        pt1_0.max_context_length,
+        pt1_0.max_tokens,
+        pt1_0.model_provider,
+        pt1_0.name,
+        pt1_0.priority,
+        pt1_0.prompt_type,
+        pt1_0.system_prompt,
+        pt1_0.temperature,
+        pt1_0.updated_time,
+        pt1_0.user_prefix 
+    from
+        prompt_templates pt1_0 
+    where
+        pt1_0.model_provider=? 
+        and pt1_0.prompt_type=? 
+        and pt1_0.enabled=1 
+    order by
+        pt1_0.priority desc 
+    limit
+        1
+Hibernate: 
+    select
+        pt1_0.id,
+        pt1_0.assistant_prefix,
+        pt1_0.conversation_starter,
+        pt1_0.created_by,
+        pt1_0.created_time,
+        pt1_0.description,
+        pt1_0.enabled,
+        pt1_0.extra_config,
+        pt1_0.max_context_length,
+        pt1_0.max_tokens,
+        pt1_0.model_provider,
+        pt1_0.name,
+        pt1_0.priority,
+        pt1_0.prompt_type,
+        pt1_0.system_prompt,
+        pt1_0.temperature,
+        pt1_0.updated_time,
+        pt1_0.user_prefix 
+    from
+        prompt_templates pt1_0 
+    where
+        pt1_0.model_provider=? 
+        and pt1_0.prompt_type=? 
+        and pt1_0.enabled=1 
+    order by
+        pt1_0.priority desc 
+    limit
+        1
+2025-07-31 16:59:41 [stream-chat-1] DEBUG org.hibernate.SQL - 
+    select
+        pt1_0.id,
+        pt1_0.assistant_prefix,
+        pt1_0.conversation_starter,
+        pt1_0.created_by,
+        pt1_0.created_time,
+        pt1_0.description,
+        pt1_0.enabled,
+        pt1_0.extra_config,
+        pt1_0.max_context_length,
+        pt1_0.max_tokens,
+        pt1_0.model_provider,
+        pt1_0.name,
+        pt1_0.priority,
+        pt1_0.prompt_type,
+        pt1_0.system_prompt,
+        pt1_0.temperature,
+        pt1_0.updated_time,
+        pt1_0.user_prefix 
+    from
+        prompt_templates pt1_0 
+    where
+        pt1_0.model_provider=? 
+        and pt1_0.prompt_type='CHAT' 
+        and pt1_0.enabled=1 
+    order by
+        pt1_0.priority desc 
+    limit
+        1
+Hibernate: 
+    select
+        pt1_0.id,
+        pt1_0.assistant_prefix,
+        pt1_0.conversation_starter,
+        pt1_0.created_by,
+        pt1_0.created_time,
+        pt1_0.description,
+        pt1_0.enabled,
+        pt1_0.extra_config,
+        pt1_0.max_context_length,
+        pt1_0.max_tokens,
+        pt1_0.model_provider,
+        pt1_0.name,
+        pt1_0.priority,
+        pt1_0.prompt_type,
+        pt1_0.system_prompt,
+        pt1_0.temperature,
+        pt1_0.updated_time,
+        pt1_0.user_prefix 
+    from
+        prompt_templates pt1_0 
+    where
+        pt1_0.model_provider=? 
+        and pt1_0.prompt_type='CHAT' 
+        and pt1_0.enabled=1 
+    order by
+        pt1_0.priority desc 
+    limit
+        1
+2025-07-31 16:59:41 [stream-chat-1] WARN  c.d.c.service.PromptTemplateService - 未找到适用的模板: modelProvider=QIANWEN, promptType=CHAT
+2025-07-31 16:59:41 [stream-chat-1] WARN  c.d.c.service.PromptBuilderService - 未找到适用模板，使用基础格式: provider=QIANWEN, type=CHAT
+2025-07-31 16:59:41 [ForkJoinPool.commonPool-worker-1] ERROR c.dreamer.chat.service.ChatService - 流式处理过程中发生错误
+org.springframework.web.reactive.function.client.WebClientResponseException$NotFound: 404 Not Found from POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:310)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ 404 NOT_FOUND from POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:310)
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onComplete(FluxMapFuseable.java:350)
+		at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:371)
+		at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+		at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onComplete(FluxFlattenIterable.java:273)
+		at reactor.adapter.JdkFlowAdapter$SubscriberToRS.onComplete(JdkFlowAdapter.java:160)
+		at java.net.http/jdk.internal.net.http.ResponseSubscribers$PublishingBodySubscriber.complete(ResponseSubscribers.java:933)
+		at java.net.http/jdk.internal.net.http.ResponseSubscribers$PublishingBodySubscriber.lambda$new$1(ResponseSubscribers.java:864)
+		at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718)
+		at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+		at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+		at java.net.http/jdk.internal.net.http.ResponseSubscribers$PublishingBodySubscriber.lambda$subscribe$3(ResponseSubscribers.java:961)
+		at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:757)
+		at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+		at java.base/java.util.concurrent.CompletableFuture.thenAccept(CompletableFuture.java:2182)
+		at java.net.http/jdk.internal.net.http.ResponseSubscribers$PublishingBodySubscriber.subscribe(ResponseSubscribers.java:957)
+		at reactor.adapter.JdkFlowAdapter$FlowPublisherAsFlux.subscribe(JdkFlowAdapter.java:68)
+		at reactor.core.publisher.Flux.subscribe(Flux.java:8777)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onNext(MonoFlatMapMany.java:196)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.FluxDoFinally$DoFinallySubscriber.onNext(FluxDoFinally.java:113)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+		at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+		at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+		at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+		at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+		at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+		at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614)
+		at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:844)
+		at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483)
+		at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+		at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+		at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+		at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+		at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+2025-07-31 16:59:41 [stream-chat-1] ERROR c.dreamer.chat.service.ChatService - AI流式生成失败: provider=qianwen, promptType=chat
+org.springframework.web.reactive.function.client.WebClientResponseException$NotFound: 404 Not Found from POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:310)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ 404 NOT_FOUND from POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:310)
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onComplete(FluxMapFuseable.java:350)
+		at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:371)
+		at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+		at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onComplete(FluxFlattenIterable.java:273)
+		at reactor.adapter.JdkFlowAdapter$SubscriberToRS.onComplete(JdkFlowAdapter.java:160)
+		at java.net.http/jdk.internal.net.http.ResponseSubscribers$PublishingBodySubscriber.complete(ResponseSubscribers.java:933)
+		at java.net.http/jdk.internal.net.http.ResponseSubscribers$PublishingBodySubscriber.lambda$new$1(ResponseSubscribers.java:864)
+		at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718)
+		at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+		at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+		at java.net.http/jdk.internal.net.http.ResponseSubscribers$PublishingBodySubscriber.lambda$subscribe$3(ResponseSubscribers.java:961)
+		at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:757)
+		at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+		at java.base/java.util.concurrent.CompletableFuture.thenAccept(CompletableFuture.java:2182)
+		at java.net.http/jdk.internal.net.http.ResponseSubscribers$PublishingBodySubscriber.subscribe(ResponseSubscribers.java:957)
+		at reactor.adapter.JdkFlowAdapter$FlowPublisherAsFlux.subscribe(JdkFlowAdapter.java:68)
+		at reactor.core.publisher.Flux.subscribe(Flux.java:8777)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onNext(MonoFlatMapMany.java:196)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.FluxDoFinally$DoFinallySubscriber.onNext(FluxDoFinally.java:113)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+		at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+		at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+		at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+		at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+		at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+		at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614)
+		at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:844)
+		at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483)
+		at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+		at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+		at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+		at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+		at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:103)
+		at reactor.core.publisher.Flux.blockLast(Flux.java:2756)
+		at com.dreamer.chat.service.ChatService.generateAiResponseStream(ChatService.java:576)
+		at com.dreamer.chat.service.ChatService.chatStream(ChatService.java:477)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+		at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:113)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-31 16:59:41 [stream-chat-1] ERROR c.dreamer.chat.service.ChatService - 流式聊天请求处理失败
+com.dreamer.chat.config.GlobalExceptionHandler$BusinessException: AI流式生成失败: 404 Not Found from POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+	at com.dreamer.chat.service.ChatService.generateAiResponseStream(ChatService.java:591)
+	at com.dreamer.chat.service.ChatService.chatStream(ChatService.java:477)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:113)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-31 17:02:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31 17:02:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-31 17:02:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

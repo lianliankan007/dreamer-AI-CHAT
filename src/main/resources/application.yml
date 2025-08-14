@@ -1,0 +1,94 @@
+spring:
+  application:
+    name: dreamer-ai-chat
+  
+  # 数据库配置
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:dreamer_ai_chat}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+  
+  # JPA配置
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: ${SHOW_SQL:false}
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  
+  # Flyway数据库迁移配置
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+  
+  # AI模型配置
+  ai:
+    # 阿里巴巴千问配置 - 使用兼容OpenAI格式的API
+    qianwen:
+      api-key: 111
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      # 注意：使用qwen-plus模型，高质量的通用模型
+      
+    # 讯飞星火配置
+    xinghuo:
+      api-key: ${XINGHUO_API_KEY:your-xinghuo-api-key}
+      base-url: https://spark-api.xf-yun.com
+      # 注意：模型参数在ModelProvider枚举中配置为spark
+      
+    # 豆包配置
+    doubao:
+      api-key: ${DOUBAO_API_KEY:your-doubao-api-key}
+      base-url: https://ark.cn-beijing.volces.com/api/v3
+      # 注意：模型参数在ModelProvider枚举中配置为ark
+      
+    # DeepSeek配置
+    deepseek:
+      api-key: ${DEEPSEEK_API_KEY:your-deepseek-api-key}
+      base-url: https://api.deepseek.com
+      # 注意：模型参数在ModelProvider枚举中配置为deepseek-chat
+
+# 应用配置
+app:
+  # 默认聊天模型
+  default-model: qianwen
+  
+  # 支持的模型列表
+  supported-models:
+    - qianwen
+    - xinghuo
+    - doubao
+    - deepseek
+  
+  # 聊天配置
+  chat:
+    max-history-size: 50
+    default-max-tokens: 2000
+    timeout-seconds: 30
+  
+  # Prompt模板配置
+  prompt:
+    # 是否启用智能类型检测
+    enable-smart-detection: true
+    # 默认上下文长度限制
+    default-context-length: 4000
+    # 缓存TTL（秒）
+    cache-ttl: 3600
+    # 是否允许动态创建模板
+    allow-dynamic-creation: true
+
+# 日志配置
+logging:
+  level:
+    com.dreamer.chat: ${LOG_LEVEL:INFO}
+    org.springframework.ai: DEBUG
+    org.flywaydb: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# 服务器配置
+server:
+  port: ${SERVER_PORT:8080}

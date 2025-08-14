@@ -1,0 +1,50 @@
+{
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home",
+            "default": true
+        }
+    ],
+    "java.sources.organizeImports.starThreshold": 3,
+    "java.sources.organizeImports.staticStarThreshold": 3,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.dependency.syncWithFolderExplorer": true,
+    "java.server.launchMode": "Standard",
+    "java.format.settings.url": "",
+    "java.format.settings.profile": "",
+    "java.maven.downloadSources": true,
+    "java.maven.downloadJavadoc": true,
+    "maven.executable.path": "/Users/hb29301/Documents/apache-maven-3.9.9/bin/mvn",
+    "java.import.maven.enabled": true,
+    "java.import.gradle.enabled": false,
+    "java.configuration.detectJdksAtStart": true,
+    "java.project.outputPath": "target/classes",
+    "java.clean.workspace": false,
+    "redhat.telemetry.enabled": false,
+    "java.codeGeneration.insertionLocation": "afterCursor",
+    "java.codeGeneration.generateComments": true,
+    "java.codeGeneration.useBlocks": true,
+    "java.codeGeneration.toString.template": "${object.className} [${member.name()}=${member.value}, ${otherMembers}]",
+    "java.saveActions.organizeImports": true,
+    "java.semanticHighlighting.enabled": true,
+    "java.signatureHelp.enabled": true,
+    "java.completion.enabled": true,
+    "java.completion.overwrite": true,
+    "java.completion.guessMethodArguments": true,
+    "java.completion.maxResults": 0,
+    "java.completion.filteredTypes": [
+        "java.awt.*",
+        "com.sun.*",
+        "sun.*",
+        "jdk.*",
+        "org.graalvm.*",
+        "io.micrometer.shaded.*"
+    ],
+    "java.project.buildOutputPath": "target/classes",
+    "java.compile.nullAnalysis.mode": "automatic"
+} 

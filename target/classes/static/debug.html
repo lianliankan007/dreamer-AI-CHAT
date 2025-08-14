@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发送按钮调试页面</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .debug-panel { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .status { padding: 5px 10px; margin: 5px; border-radius: 4px; }
+        .status.true { background: #d4edda; color: #155724; }
+        .status.false { background: #f8d7da; color: #721c24; }
+        .input-test { width: 100%; padding: 10px; margin: 10px 0; }
+        .btn-test { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .btn-test:disabled { background: #6c757d; cursor: not-allowed; }
+        .log { height: 200px; overflow-y: auto; background: #f8f9fa; padding: 10px; border: 1px solid #dee2e6; font-family: monospace; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>🔧 发送按钮调试页面</h1>
+    
+    <div class="debug-panel">
+        <h3>实时状态监控</h3>
+        <div id="statusPanel">
+            <div class="status" id="hasContentStatus">内容检查: 待检查</div>
+            <div class="status" id="chatManagerStatus">聊天管理器: 待检查</div>
+            <div class="status" id="modelsStatus">模型加载: 待检查</div>
+            <div class="status" id="streamingStatus">流式状态: 待检查</div>
+            <div class="status" id="buttonStatus">按钮状态: 待检查</div>
+        </div>
+    </div>
+    
+    <div class="debug-panel">
+        <h3>测试输入框</h3>
+        <input type="text" id="testInput" class="input-test" placeholder="在这里输入内容测试...">
+        <button id="testButton" class="btn-test" disabled>测试发送按钮</button>
+    </div>
+    
+    <div class="debug-panel">
+        <h3>调试日志</h3>
+        <div id="debugLog" class="log"></div>
+        <button onclick="clearLog()">清空日志</button>
+        <button onclick="checkMainApp()">检查主应用</button>
+    </div>
+    
+    <div class="debug-panel">
+        <h3>快速修复</h3>
+        <button onclick="window.location.href='/'">返回主页面</button>
+        <button onclick="window.location.reload()">刷新页面</button>
+        <button onclick="forceRefresh()">强制刷新(清缓存)</button>
+    </div>
+
+    <script>
+        let logCount = 0;
+        
+        function log(message) {
+            const debugLog = document.getElementById('debugLog');
+            const time = new Date().toLocaleTimeString();
+            debugLog.innerHTML += `[${time}] ${message}\n`;
+            debugLog.scrollTop = debugLog.scrollHeight;
+            logCount++;
+            if (logCount > 100) {
+                clearLog();
+            }
+        }
+        
+        function clearLog() {
+            document.getElementById('debugLog').innerHTML = '';
+            logCount = 0;
+        }
+        
+        function updateStatus(id, value, text) {
+            const element = document.getElementById(id);
+            element.className = `status ${value}`;
+            element.textContent = text;
+        }
+        
+        function checkMainApp() {
+            log('检查主应用状态...');
+            
+            // 检查主页面是否可访问
+            fetch('/')
+                .then(response => {
+                    log(`主页面状态: ${response.status}`);
+                    return response.text();
+                })
+                .then(html => {
+                    const hasScript = html.includes('app.js');
+                    log(`包含app.js: ${hasScript}`);
+                })
+                .catch(error => {
+                    log(`主页面访问失败: ${error.message}`);
+                });
+                
+            // 检查静态资源
+            ['js/app.js', 'js/chat.js', 'js/utils.js', 'css/style.css'].forEach(resource => {
+                fetch(resource)
+                    .then(response => log(`${resource}: ${response.status}`))
+                    .catch(error => log(`${resource}: 失败 - ${error.message}`));
+            });
+        }
+        
+        function testButtonLogic() {
+            const input = document.getElementById('testInput');
+            const button = document.getElementById('testButton');
+            
+            const hasContent = input.value.trim().length > 0;
+            button.disabled = !hasContent;
+            
+            updateStatus('hasContentStatus', hasContent, `内容检查: ${hasContent ? '有内容' : '无内容'} (${input.value.length}字符)`);
+            updateStatus('buttonStatus', !button.disabled, `按钮状态: ${button.disabled ? '禁用' : '启用'}`);
+            
+            log(`测试按钮逻辑: 内容=${hasContent}, 按钮=${button.disabled ? '禁用' : '启用'}`);
+        }
+        
+        function forceRefresh() {
+            window.location.href = window.location.href + '?t=' + Date.now();
+        }
+        
+        // 初始化
+        document.getElementById('testInput').addEventListener('input', testButtonLogic);
+        document.getElementById('testButton').addEventListener('click', () => {
+            log('测试按钮点击成功！');
+            alert('测试按钮工作正常！');
+        });
+        
+        // 模拟主应用的按钮逻辑
+        updateStatus('hasContentStatus', false, '内容检查: 无内容');
+        updateStatus('chatManagerStatus', false, '聊天管理器: 未连接');
+        updateStatus('modelsStatus', false, '模型加载: 未加载');
+        updateStatus('streamingStatus', true, '流式状态: 空闲');
+        updateStatus('buttonStatus', false, '按钮状态: 禁用');
+        
+        log('调试页面初始化完成');
+        log('请在测试输入框中输入内容，观察按钮状态变化');
+        log('如果测试按钮正常工作，说明问题在主应用的JavaScript逻辑中');
+        
+        // 定期检查主应用状态
+        setInterval(() => {
+            if (window.opener && window.opener.app) {
+                const app = window.opener.app;
+                try {
+                    const status = app.getStatus();
+                    updateStatus('chatManagerStatus', status.chatManager !== null, 
+                        `聊天管理器: ${status.chatManager ? '已连接' : '未连接'}`);
+                    
+                    if (status.chatManager) {
+                        updateStatus('modelsStatus', status.chatManager.hasModels, 
+                            `模型加载: ${status.chatManager.hasModels ? '已加载' : '未加载'}`);
+                        updateStatus('streamingStatus', !status.chatManager.isStreaming, 
+                            `流式状态: ${status.chatManager.isStreaming ? '处理中' : '空闲'}`);
+                    }
+                    
+                    log('主应用状态更新');
+                } catch (error) {
+                    log(`主应用状态检查失败: ${error.message}`);
+                }
+            }
+        }, 2000);
+    </script>
+</body>
+</html> 

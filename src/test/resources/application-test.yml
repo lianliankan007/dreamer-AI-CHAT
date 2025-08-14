@@ -1,0 +1,67 @@
+spring:
+  # 测试数据库配置 - 使用SQLite内存数据库
+  datasource:
+    url: jdbc:sqlite::memory
+    driver-class-name: org.sqlite.JDBC
+    username: 
+    password: 
+  
+  # JPA配置
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+  
+  # 日志配置
+  logging:
+    level:
+      com.dreamer.chat: DEBUG
+      org.springframework.test: INFO
+      org.springframework.web: INFO
+      org.mockito: WARN
+      org.hibernate: WARN
+
+  # AI模型配置（测试环境）
+  ai:
+    openai:
+      api-key: test-api-key
+      base-url: http://localhost:8080/mock-ai
+      chat:
+        options:
+          model: qwen-turbo
+          temperature: 0.7
+
+# 应用配置
+app:
+  chat:
+    timeout-seconds: 5
+    max-history-size: 5
+    enable-async: true
+  
+  ai:
+    providers:
+      qianwen:
+        enabled: true
+        api-key: test-qianwen-key
+        model: qwen-turbo
+        base-url: http://localhost:8080/mock-qianwen
+      xinghuo:
+        enabled: false
+      doubao:
+        enabled: false
+      deepseek:
+        enabled: false
+
+# 测试专用配置
+test:
+  mock:
+    ai-response-delay: 100
+    enable-real-ai: false
+  
+  performance:
+    max-concurrent-requests: 10
+    timeout-seconds: 30 
